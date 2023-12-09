@@ -185,8 +185,61 @@ class Levels:
                     [1, 1, 2, 1]]
     num_rows_14 = len(level14_grid)
     num_columns_14 = len(level14_grid[0])
-    level14_psp = [(0, 1)]
+    level14_psp = [(0, 1), (1, 2)]
     to_win_14 = (1, 3)
     heuristic_14 = manhattan_distance(level14_psp, to_win_14)
     level14 = [num_rows_14, num_columns_14, level14_grid, level14_psp, to_win_14, start_cost, heuristic_14]
     levels.put(level14)
+
+    # creating level 15
+    level15_grid = [[2, 3, 1, 1, 2],
+                    [2, 2, 2, 2, 2]]
+    num_rows_15 = len(level15_grid)
+    num_columns_15 = len(level15_grid[0])
+    level15_psp = [(0, 2)]
+    to_win_15 = (1, 3)
+    heuristic_15 = manhattan_distance(level15_psp, to_win_15)
+    level15 = [num_rows_15, num_columns_15, level15_grid, level15_psp, to_win_15, start_cost, heuristic_15]
+    levels.put(level15)
+
+    # creating level 16
+    level16_grid = [[3, 2, 2],
+                    [3, 1, 2],
+                    [2, 3, 2]]
+    num_rows_16 = len(level16_grid)
+    num_columns_16 = len(level16_grid[0])
+    level16_psp = [(0, 0)]
+    to_win_16 = (2, 2)
+    heuristic_16 = manhattan_distance(level16_psp, to_win_16)
+    level16 = [num_rows_16, num_columns_16, level16_grid, level16_psp, to_win_16, start_cost, heuristic_16]
+    levels.put(level16)
+
+    # creating level 17
+    level17_grid = [[-1, 1, 2, -1, 1, 1],
+                    [2, 2, 2, 1, 2, 2, 1],
+                    [1, 2, 2, -1, 2, 2, 1],
+                    [-1, -1, 2, 3, 2, -1, -1]]
+    num_rows_17 = len(level17_grid)
+    num_columns_17 = len(level17_grid[0])
+    level17_psp = [(1, 3)]
+    to_win_17 = (3, 3)
+    heuristic_17 = manhattan_distance(level17_psp, to_win_17)
+    level17 = [num_rows_17, num_columns_17, level17_grid, level17_psp, to_win_17, start_cost, heuristic_17]
+    levels.put(level17)
+
+    # creating level 42
+    level42_grid = [[1, 1, -1, 1, 1],
+                    [-1, 2, 1, 2, -1],
+                    [1, 2, -1, 2, 1],
+                    [-1, 1, 1, 1, 1],
+                    [-1, 1, 1, 1, -1]]
+    num_rows_42 = len(level42_grid)
+    num_columns_42 = len(level42_grid[0])
+    level42_psp = [(1, 1), (1, 2), (3, 3), (4, 1)]
+    to_win_42 = (0, 4)
+    heuristic_42 = manhattan_distance(level42_psp, to_win_42)
+    level42 = [num_rows_42, num_columns_42, level42_grid, level42_psp, to_win_42, start_cost, heuristic_42]
+    levels.put(level42)
+
+
+

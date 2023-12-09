@@ -8,7 +8,7 @@ from BFS import BFS
 from recursive_DFS import RecursiveDFS
 from levels import Levels
 
-lev = Levels.level14
+lev = Levels.level17
 st = State(lev)
 
 print("Logic steps Games")

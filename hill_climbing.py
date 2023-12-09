@@ -5,7 +5,7 @@ from levels import Levels
 
 
 class HillClimbing(Algo, ABC):
-    lev = Levels.level4
+    lev = Levels.level17
     st = State(lev)
     visited = {}
 
@@ -63,7 +63,7 @@ class HillClimbing(Algo, ABC):
                     if self.visited.get((str(state)), -1) == -1:
                         self.pQueue.append(state)
                         state.parent = self.parent_key
-
-                        self.visited[str(state)] = state
-                        self.parent_key = str(state)
+                        #
+                        # self.visited[str(state)] = state
+                        # self.parent_key = str(state)
                 self.pQueue = self.sorting()

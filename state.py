@@ -46,7 +46,7 @@ class State:
         cells = []
         possible_moves = [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
         for j, k in possible_moves:
-            if self.row > j >= 0 and self.columns > k >= 0:
+            if self.row > j >= 0 and self.columns > k >= 0 and self.grid[j][k] > 0:
                 cells.append((j, k))
         return cells
 
