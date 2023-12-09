@@ -227,6 +227,20 @@ class Levels:
     level17 = [num_rows_17, num_columns_17, level17_grid, level17_psp, to_win_17, start_cost, heuristic_17]
     levels.put(level17)
 
+    # creating level 41
+    level41_grid = [[-1, -1, 3, 3, -1, -1],
+                    [1, 1, 2, 2, -1, -1],
+                    [1, -1, 1, 3, -1, 2],
+                    [1, 1, 2, 4, 3, 2],
+                    [-1, -1, 2, 3, 2, 1]]
+    num_rows_41 = len(level41_grid)
+    num_columns_41 = len(level41_grid[0])
+    level41_psp = [(2, 0), (2, 2), (2, 3)]
+    to_win_41 = (3, 5)
+    heuristic_41 = manhattan_distance(level41_psp, to_win_41)
+    level41 = [num_rows_41, num_columns_41, level41_grid, level41_psp, to_win_41, start_cost, heuristic_41]
+    levels.put(level41)
+
     # creating level 42
     level42_grid = [[1, 1, -1, 1, 1],
                     [-1, 2, 1, 2, -1],

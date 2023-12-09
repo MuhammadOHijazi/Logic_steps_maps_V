@@ -29,11 +29,13 @@ class RecursiveDFS(Algo, ABC):
             self.print_path(current_state)
             print("path:", len(self.path), "\nstates:", self.counter)
             print("You Win Congrats")
-            return
+            if len(self.next_states):
+                exit()
+            else:
+                return
         else:
             self.next_states = current_state.next_state()
             for state in self.next_states:
-                # ToDO: Have to fix vistited method
                 if self.visited.get((str(state)), -1) == -1:
                     self.next_states.append(state)
                     state.parent = parent_key

@@ -5,7 +5,7 @@ from levels import Levels
 
 
 class HillClimbing(Algo, ABC):
-    lev = Levels.level17
+    lev = Levels.level41
     st = State(lev)
     visited = {}
 

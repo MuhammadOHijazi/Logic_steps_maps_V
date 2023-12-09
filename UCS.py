@@ -5,7 +5,7 @@ from levels import Levels
 
 
 class UCS(Algo, ABC):
-    lev = Levels.level17
+    lev = Levels.level41
     st = State(lev)
     visited = {}
 
@@ -37,7 +37,6 @@ class UCS(Algo, ABC):
         return sorting_list
 
     def play(self):
-        print("Solve the game by the Algorithm UCS")
         self.pQueue.append(self.st)
         self.visited[str(self.st)] = self.st
         self.parent_key = str(self.st)
@@ -62,6 +61,6 @@ class UCS(Algo, ABC):
                         self.pQueue.append(state)
                         state.parent = self.parent_key
                         #
-                        # self.visited[str(state)] = state
-                        # self.parent_key = str(state)
+                        self.visited[str(state)] = state
+                        self.parent_key = str(state)
                 self.pQueue = self.sorting()

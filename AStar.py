@@ -5,7 +5,7 @@ from levels import Levels
 
 
 class AStar(Algo, ABC):
-    lev = Levels.level42
+    lev = Levels.level41
     st = State(lev)
     visited = {}
 
@@ -53,6 +53,7 @@ class AStar(Algo, ABC):
             print("\n---------------------------------------------\n")
             self.visited[str(current_state)] = current_state
             self.parent_key = str(current_state)
+
             # check if the current state is a win state
             if current_state.isfinish():
                 self.print_path(current_state)
@@ -66,7 +67,6 @@ class AStar(Algo, ABC):
                     if self.visited.get((str(state)), -1) == -1:
                         self.pQueue.append(state)
                         state.parent = self.parent_key
-                        #
-                        # self.visited[str(state)] = state
-                        # self.parent_key = str(state)
+                        self.visited[str(state)] = state
+                        self.parent_key = str(state)
                 self.pQueue = self.sorting()
